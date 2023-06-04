@@ -3,8 +3,7 @@ FROM maven:3.6-jdk-11 AS build
 WORKDIR /app
 
 # pom.xml과 src/ 디렉토리 복사
-COPY pom.xml .
-COPY src ./src
+COPY . .
 
 # 애플리케이션 빌드
 RUN mvn clean package
